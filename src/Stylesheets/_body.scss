@@ -1,0 +1,106 @@
+@import './vars';
+
+.Wrapper {
+    text-align: center;
+    margin-right: auto;
+    margin-left:  auto; 
+    max-width: 960px; 
+    padding-right: 10px; 
+    padding-left:  10px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.characterList {
+    margin-left: 11%;
+}
+
+.characterList ul {
+    width: 100%;
+    height: auto;
+    float: left;
+    clear: left;
+}
+
+.characterList ul li {
+    width: 26%;
+    float: left;
+    background-color: #fff;
+    border: 1px solid #dfe3e6;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+    height: 510px;
+    @media screen and (min-width: $phone) and (max-width: $laptop) {
+        height: 607px;
+        width: 40%
+    }
+}
+
+.characterList ul li:not(:nth-child(1)),
+.characterList ul li:not(:nth-child(2)) {
+    margin-top: 0
+}
+.characterList ul li:not(:nth-child(1)),
+.characterList ul li:not(:nth-child(2)) {
+    margin-top: 50px
+}
+
+
+.characterList ul li:nth-child(1), 
+.characterList ul li:nth-child(1 + 3n) {
+    margin-left: 0
+}
+
+.characterList ul li {
+    margin-left: 11%;
+    &:hover {
+        border: 1px solid #8897a2;
+        cursor: pointer;
+    }
+    @media screen and (min-width: $phone) and (max-width: $laptop) {
+        margin-left: 28%;
+    }
+}
+
+.characterList ul li p {
+    padding: 17px;
+    font-size: 14px;
+    &:nth-child(3), &:nth-child(5) {
+        background-color: lightcoral;
+    }
+}
+
+.characterList ul li p:nth-child(2) {
+    margin-top: -30px;
+    padding: 11px;
+    background-color:blue;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: absolute;
+    color: $white;
+    font-size: 14.7px
+}
+
+.characterList ul li p:nth-child(3) {
+    margin-top: -3px;
+    padding-top: 27px;
+}
+
+.characterList ul li p span {
+    font-weight: 700;
+}
+
+.characterList ul li a {
+    color: #fff;
+    text-decoration: none;
+    background-color:blue;
+    padding: 6px 10px;
+    font-size: 13px;
+    &:hover {
+        border: 3px solid #000;
+        background-color: transparent;
+        color: #000
+    }
+}
